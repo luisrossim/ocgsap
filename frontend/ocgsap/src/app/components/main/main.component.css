@@ -1,0 +1,92 @@
+.logo-details span:first-child { font-size: 24px }
+
+.logo-details span:last-child { font-size: 14px }
+
+.otica-info { font-size: 15px }
+
+.main-content-banners {
+    margin: 2.5rem 0rem 6rem 0rem;
+}
+
+.main-content-banners div {
+   overflow: hidden;
+   border-radius: 18px;
+   position: relative;
+}
+
+.main-content-banners div .span-subtitle {
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--blue) !important;
+    padding: 0.3rem 1rem;
+    font-size: 15px !important;
+    border: none;
+    background-color: white;
+    border-radius: 22px;
+    font-weight: 700;
+}
+
+.main-content-banners div .span-title {
+    position: absolute;
+    z-index: 2;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-align: end;
+    font-size: 17px;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    width: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #0000004e 20%, #0000004e 80%, rgba(255,255,255,0) 100%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    font-weight: 700;
+}
+
+.main-content-banners div img {
+    overflow: hidden;
+    width: 380px;
+    border-radius: 18px;
+    transition: all 0.3s ease-out;
+}
+
+.main-content-banners div:hover {
+    .img-banner {
+        transform: scale(1.05);
+    }
+}
+
+.video-container-md, .video-container-sm {
+    overflow: hidden;
+    width: 100%;
+    max-height: 400px;
+}
+
+.video-container-md video, .video-container-sm video {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 577px) {
+    .video-container-sm { display: none }
+}
+
+@media (max-width: 576px) {
+    .video-container-md { display: none }
+    .video-container-md, .video-container-sm { height: auto }
+    .main-content-banners div { height: 285px }
+    .main-content-banners div img { width: auto }
+}
+
+@media (max-width: 2120px) {
+    .container-xxl {
+        max-width: 100%;
+        padding: 0;
+    }
+}

@@ -5,10 +5,11 @@
 .nav-btn {
     border-radius: 10px;
     padding: 4px 8px;
-    color: white !important;
     transition: none;
+    color: white !important;
     border: none;
-    background-color: #1e407256 !important;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: var(--blue) !important;
+    /* background-image: linear-gradient(to right, #155790, #007db6, #007db6); */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }

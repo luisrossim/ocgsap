@@ -5,9 +5,18 @@
 
 body { margin: 0 }
 
-.page-title {
-    margin-top: 5rem;
+a { cursor: pointer }
+
+:root {
+    --blue: #1767AC;
+    --green: #29A862;
 }
+
+.bg-blue {
+    background-color: var(--blue) !important;
+}
+
+.page-title { margin-top: 5.5rem }
 
 .btn, .p-button {
     font-size: 15px !important;
