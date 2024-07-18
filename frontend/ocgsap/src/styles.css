@@ -16,7 +16,7 @@ a { cursor: pointer }
     background-color: var(--blue) !important;
 }
 
-.page-title { margin-top: 5.5rem }
+.page-title { margin-top: 2.8rem}
 
 .btn, .p-button {
     font-size: 15px !important;
@@ -25,3 +25,9 @@ a { cursor: pointer }
     box-shadow: none;
     font-weight: 500;
 }
+
+
+@keyframes down {
+    0% { transform: translateY(-50px) }
+    100% { transform: translateY(0px) }
+  }

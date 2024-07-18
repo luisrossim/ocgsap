@@ -1,0 +1,16 @@
+.footer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.footer-btn {
+    border-radius: 48px;
+    width: 70px;
+    height: 70px;
+    padding: 4px;
+    transition: none;
+    color: white !important;
+    border: none;
+    background-color: var(--green) !important;
+}
