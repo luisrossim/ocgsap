@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-  trigger: boolean = false;
+  sidebarVisible: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
