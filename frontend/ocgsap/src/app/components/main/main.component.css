@@ -1,6 +1,11 @@
-.logo-details span:first-child { font-size: 24px }
+/* .logo-details {
+    color: white;
+} */
 
-.logo-details span:last-child { font-size: 14px }
+/* .header {
+    background-color: var(--blue);
+    padding: 1.2rem 0rem 1rem 0rem;
+} */
 
 .banners {
     margin: 2.5rem 0rem 6rem 0rem;
@@ -30,6 +35,8 @@
     bottom: 40%;
     left: 50%;
     z-index: 2;
+    letter-spacing: 4px;
+    font-weight: 300;
     transform: translateX(-50%);
     color: white;
     text-align: center;
@@ -44,19 +51,18 @@
     color: white;
     font-weight: 600;
     font-size: 13px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
     border-top-left-radius: 18px;
     padding: 0.5rem 1rem;
     transition: all 0.3s ease-out;
 }
 
-.img-fluid, .imagem-wrapper, .imagem-wrapper-sm {
+.banners .img-fluid, .imagem-wrapper, .imagem-wrapper-sm {
     border-radius: 18px;
 }
 
-.img-fluid {
+.banners .img-fluid {
     overflow: hidden;
-    border-radius: 18px;
     transition: all 0.3s ease-out;
     filter: brightness(50%);
 }
@@ -98,6 +104,19 @@
     .imagem-wrapper-sm {
         height: 200px;
         max-width: 100%;
+    }
+
+    .sm { font-size: 24px }
+
+    .container-full {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .banners, .banners .img-fluid, .imagem-wrapper, .imagem-wrapper-sm {
+        border-radius: 0px;
     }
 }
 

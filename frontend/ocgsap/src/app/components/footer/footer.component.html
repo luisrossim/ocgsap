@@ -1,5 +1,131 @@
-<div class="footer">
-    <button pRipple class="btn footer-btn">
-        <i class="bi bi-whatsapp fs-2"></i>
-    </button>
+<div>
+    <div class="footer">
+        <button pRipple class="btn footer-btn">
+            <i class="bi bi-whatsapp fs-4"></i>
+        </button>
+    </div>
+
+    <div class="footer-wrapper">
+        <div class="footer-items-sm">
+            <div [ngStyle]="{backgroundImage: 'url(assets/logo-banner-3.png)'}"
+            class="d-flex flex-column align-items-center text-center py-4 min-details first">
+                <div class="py-3">
+                   <span class="fs-4 fw-semibold">FALE CONOSCO</span>
+                   <div class="d-flex justify-content-center fs-6 mt-2">
+                        <span class="fw-medium telefone">(27) 9 9999-9999</span>
+                    </div>
+                </div>
+            </div>
+            <div [ngStyle]="{backgroundImage: 'url(assets/logo-banner.png)'}"
+            class="d-flex flex-column align-items-center gap-4 text-center py-4 min-details last">
+                <div>
+                    <span>Redes sociais</span>
+                    <div class="d-flex gap-3 mt-2 justify-content-center">
+                        <a><i class="fa-brands fa-facebook fs-1"></i></a>
+                        <a><i class="fa-brands fa-instagram fs-1"></i></a>
+                        <a><i class="fa-brands fa-x-twitter fs-1"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <span>Formas de pagamento</span>
+                    <div class="d-flex gap-4 mt-2 justify-content-center">
+                        <i class="fa-brands fa-pix fs-1"></i>
+                        <i class="fa-solid fa-credit-card fs-1"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Accordion Item #1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Accordion Item #2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Accordion Item #3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-lg footer-items w-100">
+            <div class="row">
+                <div class="col gap-2">
+                    <span>Sobre</span>
+                    <div><a>Sobre a empresa</a></div>
+                    <div><a>Sobre o atendimento</a></div>
+                    <div><a>Filtro de luz azul</a></div>
+                    <div><a>Lentes de contato</a></div>
+                </div>
+                <div class="col gap-2">
+                    <span>Dúvidas frequentes</span>
+                    <div><a>Atendimento ao cliente</a></div>
+                    <div><a>FAQ</a></div>
+                </div>
+                <div class="col gap-2">
+                    <span>Legal e Políticas</span>
+                    <div><a>Política de privacidade</a></div>
+                    <div><a>Política de devoluções</a></div>
+                    <div><a>Política de garantia</a></div>
+                    <div><a>Código do consumidor</a></div>
+                </div>
+                <div class="col gap-2">
+                    <span>Fale conosco</span>
+                    <div><a>Contato</a></div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <span>Redes sociais</span>
+                            <div class="d-flex gap-3 align-items-center mt-3">
+                                <a><i class="fa-brands fa-facebook fs-6"></i></a>
+                                <a><i class="fa-brands fa-instagram fs-5"></i></a>
+                                <a><i class="fa-brands fa-x-twitter fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <span>Formas de pagamento</span>
+                            <div class="d-flex gap-3 align-items-center mt-3">
+                                <i class="fa-brands fa-pix fs-6"></i>
+                                <i class="fa-solid fa-credit-card fs-6"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-end py-3">
+            <div class="container-lg">
+                <div class="d-flex align-items-center justify-content-start gap-3 ps-2">
+                    <div>
+                        <img class="img-fluid" src="assets/logo-green.png" width="35px" alt="logo">
+                    </div>
+                    <div class="footer-details">
+                        <span class="fw-bold">ÓTICAS CRICARÉ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
