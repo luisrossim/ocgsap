@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, QueryList, ViewChild } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -15,29 +15,39 @@ export class MainComponent implements AfterViewInit {
   @ViewChild('banner5') banner5!: ElementRef<HTMLDivElement>
   @ViewChild('banner6') banner6!: ElementRef<HTMLDivElement>
   @ViewChild('video') video!: ElementRef<HTMLDivElement>
+  @ViewChild('section1fadein') section1fadein!: ElementRef<HTMLDivElement>
 
   ngAfterViewInit(){
-    //gsap.registerPlugin(ScrollTrigger)
-    gsap.from(this.banner1.nativeElement, {x: "-200px", opacity: 0})
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.from(this.banner1.nativeElement, {x: "-300px", opacity: 0})
     gsap.to(this.banner1.nativeElement, {x: "0px", opacity: 1, ease:'power4.out', duration: 1.8})
 
-    gsap.from(this.banner2.nativeElement, {y: "-100px", opacity: 0})
+    gsap.from(this.banner2.nativeElement, {y: "-150px", opacity: 0})
     gsap.to(this.banner2.nativeElement, {y: "0px", opacity: 1, ease:'power4.out', duration: 1.8})
 
-    gsap.from(this.banner3.nativeElement, {y: "-50px", opacity: 0})
+    gsap.from(this.banner3.nativeElement, {y: "-100px", opacity: 0})
     gsap.to(this.banner3.nativeElement, {y: "0px", opacity: 1, ease:'power4.out', duration: 2})
 
-    gsap.from(this.banner4.nativeElement, {y: "100px", opacity: 0})
+    gsap.from(this.banner4.nativeElement, {y: "150px", opacity: 0})
     gsap.to(this.banner4.nativeElement, {y: "0px", opacity: 1, ease:'power4.out', duration: 2})
 
-    gsap.from(this.banner5.nativeElement, {y: "-100px", x: "50px", opacity: 0})
+    gsap.from(this.banner5.nativeElement, {y: "-150px", x: "50px", opacity: 0})
     gsap.to(this.banner5.nativeElement, {y: "0px", x: "0px", opacity: 1, ease:'power4.out', duration: 3})
 
-    gsap.from(this.banner6.nativeElement, {y: "50px", x: "50px", opacity: 0})
+    gsap.from(this.banner6.nativeElement, {y: "100px", x: "50px", opacity: 0})
     gsap.to(this.banner6.nativeElement, {y: "0px", x: "0px", opacity: 1, ease:'power4.out', duration: 4})
 
-    gsap.from(this.video.nativeElement, {scale: 0.8, opacity: 0})
-    gsap.to(this.video.nativeElement, {scale: 1, opacity: 1, ease:'power4.out', duration: 1.5})
+    gsap.from(this.section1fadein.nativeElement, {scale: 0.8, opacity: 0})
+    gsap.to(this.section1fadein.nativeElement, {scale: 1, opacity: 1, ease:'power4.out', duration: 2})
+
+    gsap.to(this.video.nativeElement, {
+      scale: 1, opacity: 1, ease:'power4.out', duration: 4,
+      scrollTrigger: {
+        trigger: this.section1fadein.nativeElement,
+        start: '70% center',
+        end: 'bottom center'
+      }
+    })
   }
 
 }

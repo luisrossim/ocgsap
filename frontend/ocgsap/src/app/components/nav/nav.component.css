@@ -11,7 +11,6 @@
 .otica-info { font-size: 14px }
 
 .nav-btn {
-    border-radius: 10px;
     padding: 4px 8px;
     transition: none;
     color: white !important;
@@ -38,10 +37,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
     grid-template-areas:
-    "item1 item1 item2 item2"
-    "item1 item1 item2 item2"
-    "item3 item4 item6 item6"
-    "item5 item5 item6 item6";
+    "item1 item1 item1 item2"
+    "item1 item1 item1 item2"
+    "item4 item5 item3 item2"
+    "item6 item6 item3 item2";
 }
 
 .c-grid div {
@@ -60,9 +59,34 @@
     color: white;
 }
 
+.c-grid div a {
+    position: relative;
+}
+
+.c-grid div a img {
+    transition: 200ms all ease-out;
+}
+
 .c-grid a:hover {
-    background-color: white;
-    color: black;
+    img {
+        filter: invert();
+    }
+    .span-sidebar {
+        font-weight: 900;
+        letter-spacing: 6px;
+    }
+}
+
+.span-sidebar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-wrap: nowrap;
+    transition: 200ms all;
+    z-index: 2;
 }
 
 #item1 {
@@ -83,12 +107,10 @@
 
 #item5 {
     grid-area: item5;
-    border-bottom-left-radius: 22px;
 }
 
 #item6 {
     grid-area: item6;
-    border-bottom-right-radius: 22px;
 }
 
 @media (max-width: 576px) {
@@ -104,7 +126,7 @@
 
     .c-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 1.2fr 1.2fr 0.8fr 0.8fr 0.8fr 0.8fr;
+        grid-template-rows: 1.2fr 0.8fr 1.2fr 0.8fr 1.2fr 0.4fr;
         grid-template-areas:
         "item1"
         "item2"
@@ -120,9 +142,5 @@
     
     #item6 {
         border-bottom-left-radius: 0px;
-    }
-
-    .c-grid div {
-        border: none;
     }
 }

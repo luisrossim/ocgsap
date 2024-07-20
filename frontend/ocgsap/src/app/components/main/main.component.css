@@ -3,7 +3,7 @@
 }
 
 .carousel, .carousel-caption {
-    height: 250px;
+    height: 340px;
     overflow: hidden;
 }
 
@@ -12,12 +12,13 @@
 }
 
 .carousel-caption {
-    top: 87px;
+    top: 132px;
 }
 
 .carousel-title {
-    font-family: 'Bowlby One', sans-serif !important;
-    font-size: 24px;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 900;
+    font-size: 32px;
     letter-spacing: 7px;
 }
 
@@ -55,28 +56,13 @@
     font-size: 28px;
 }
 
-.bg-text {
-    font-family: 'Bowlby One', sans-serif !important;
-    writing-mode: vertical-lr;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 2;
-    font-size: 56px;
-    color: transparent;
-    -webkit-text-stroke: 1px rgb(117, 117, 117);
-    letter-spacing: 7px;
-    line-height: 38px;
-}
-
 .banner-title {
-    font-family: 'Bowlby One', sans-serif !important;
+    font-family: 'Lato', sans-serif !important;
     position: absolute;
     bottom: 40%;
     left: 50%;
     z-index: 2;
-    font-weight: 300;
+    font-weight: 900;
     transform: translateX(-50%);
     color: white;
     text-align: center;
@@ -104,7 +90,7 @@
 .banners .img-fluid {
     overflow: hidden;
     transition: all 0.3s ease-out;
-    filter: brightness(50%);
+    filter: brightness(80%);
 }
 
 .imagem-wrapper:hover, .imagem-wrapper-sm:hover {
@@ -118,24 +104,127 @@
     }
 }
 
-.video-container-md, .video-container-sm {
-    overflow: hidden;
-    width: 100%;
-    max-height: 400px;
+.video-container-md {
+    opacity: 0;
+    scale: 0.8;
 }
 
-.video-container-md video, .video-container-sm video {
+.video-container-md {
+    overflow: hidden;
+    width: 100%;
+    max-height: 320px;
+}
+
+.no-video {
+    display: none;
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+.video-container-md video {
     width: 100%;
     object-fit: cover;
 }
 
-@media (min-width: 577px) {
-    .video-container-sm { display: none }
+.section-details-1 {
+   margin: 5rem 0rem;
+}
+
+.first {
+    overflow: hidden;
+    max-height: 380px;
+}
+
+.image-details, .text-details {
+    width: 50%;
+}
+
+.section-card {
+    overflow: hidden;
+    max-height: 700px;
+    text-align: center;
+}
+
+.section-details-1 .container-lg {
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid rgb(228, 228, 228);
+}
+
+.section-card .btn {
+    color: white;
+    background-color: var(--blue);
+    margin-top: 15px;
+}
+
+.slide-wrapper {
+    position: relative;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 5rem 0rem;
+}
+
+.square-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    height: 100%;
+    width: 50px;
+    box-shadow: -25px 0px 40px 30px white;
+}
+
+.square-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    width: 50px;
+    box-shadow: 25px 0px 40px 30px white;
+}
+
+.item-slide.oculos {
+    display: inline-block;
+    animation: 7s slide infinite linear;
+}
+
+.item-slide.marcas {
+    display: inline-block;
+    animation: 7s slide infinite linear;
+}
+
+.slide-wrapper:hover .item-slide {
+    animation-play-state: paused;
+}
+
+.item-slide.oculos a img {
+    height: 120px;
+}
+
+.item-slide.marcas a img {
+    height: 80px;
+}
+
+.item-slide a img:hover {
+    filter: opacity(0.3);
+}
+
+.item-slide a {
+    margin: 0rem 3.5rem;
+}
+
+.container-xxl {
+    padding: 0 !important;
 }
 
 @media (max-width: 576px) {
-    .video-container-md { display: none }
-    .video-container-md, .video-container-sm { height: auto }
+    .video-container-md { height: auto }
     .imagem-wrapper {
         width: 100%;
         height: 200px;
@@ -155,6 +244,40 @@
     }
 
     .container-full {
+        display: none;
+    }
+
+    .section-card:first-child {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .section-card:last-child {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .image-details {
+        overflow: hidden;
+    }
+
+    .image-details, .text-details {
+        width: 100%;
+    }
+
+    .section-details-1 .container-lg {
+       border-radius: 0px;
+       border: none;
+    }
+
+    .square-left, .square-right {
+        width: 10px;
+    }
+
+    .no-video {
+        display: block;
+    }
+    .video-container-md {
         display: none;
     }
 }
